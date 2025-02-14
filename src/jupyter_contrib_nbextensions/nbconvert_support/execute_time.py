@@ -8,7 +8,9 @@ from nbconvert.preprocessors.execute import ExecutePreprocessor
 
 try:
     # notebook >= 5.0.0-rc1
-    import notebook._tz as nbtz
+    #import notebook._tz as nbtz
+    # See https://github.com/ipython-contrib/jupyter_contrib_nbextensions/pull/1663#issuecomment-2248001870
+    import jupyter_server._tz as nbtz
 except ImportError:
     # notebook < 5.0.0-rc1
     import notebook.services.contents.tz as nbtz
